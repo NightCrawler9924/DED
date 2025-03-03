@@ -1,0 +1,209 @@
+/* Global Styles */
+:root {
+    --primary-color: #2E8B57; /* Forest Green */
+    --secondary-color: #3CB371; /* Medium Sea Green */
+    --accent-color: #A9DFBF; /* Light Green */
+    --background-color: #F0F4F3; /* Soft white */
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    padding-bottom: 50px;
+}
+
+/* Navigation Bar */
+nav {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background: var(--accent-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 8px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Section Styles */
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 50px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    border-left: 8px solid var(--secondary-color);
+    padding-left: 20px;
+}
+
+p, ul {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Reflection Page Specific Styles */
+#reflection {
+    background-color: var(--background-color); /* Slightly different background */
+}
+
+#reflection p {
+    font-style: italic; /* Makes the reflection paragraph italic */
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: var(--accent-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+ul li::before {
+    content: '🌿';
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+
+/* Image Gallery */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 12px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 1.3rem;
+    position: relative;
+    margin-top: 20px; /* Add space above footer for longer content */
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p, ul li {
+        font-size: 1.3rem;
+    }
+}
